@@ -1,0 +1,89 @@
+{
+  "idForm": 3,
+  "questions": [
+    {
+      "type": 4,
+      "title": "FECHA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "REGIONAL",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "OFICINA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "FUNCIONARIO",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "EMBARCACIÓN",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "MATRÍCULA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "PESQUERÍA AUTORIZADA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "PATENTE DE PESCA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "EMPRESA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "ARMADOR",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "CAPITÁN DE PESCA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "type": 1,
+      "title": "LOCALIZACIÓN",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    }
+  ]
+}

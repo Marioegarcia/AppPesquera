@@ -1,0 +1,521 @@
+{
+  "idForm": 1,
+  "questions": [
+    {
+      "cons": 1,
+      "type": 2,
+      "title": "INSPECCIÓN No",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 2,
+      "type": 3,
+      "title": "REGIÓN / MUNICIPIO",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        { "id": 1, "title": "Caribe / Cartagena", "value": null },
+        { "id": 2, "title": "Caribe / Barranquilla", "value": null },
+        { "id": 3, "title": "Pacífico / Bahía Solano", "value": null },
+        { "id": 4, "title": "Pacífico / Buenaventura", "value": null },
+        { "id": 5, "title": "Pacífico / Tumaco", "value": null }
+      ]
+    },
+    {
+      "cons": 3,
+      "type": 3,
+      "title": "PUERTO/MUELLE DE INSPECCIÓN",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        { "id": 1, "title": "Cartagena / Mamonal", "value": null },
+        { "id": 2, "title": "Barranquilla / Bitco S.A", "value": null },
+        { "id": 3, "title": "Bahía Solano / El Muelle", "value": null },
+        { "id": 4, "title": "Buenaventura / La Palera", "value": null },
+        { "id": 5, "title": "Buenaventura / El Piñal", "value": null },
+        { "id": 6, "title": "Tumaco / Puerto Hondo", "value": null }
+      ]
+    },
+    {
+      "cons": 4,
+      "type": 4,
+      "title": "FECHA DE INSPECCIÓN",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 5,
+      "type": 5,
+      "title": "SE RECIBIÓ NOTIFICACIÓN PREVIA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        { "id": 0, "title": "NO", "value": null },
+        { "id": 1, "title": "SI", "value": null }
+      ]
+    },
+    {
+      "cons": 6,
+      "type": 5,
+      "title": "FINALIDAD ZARPE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        { "id": 1, "title": "PESCA", "value": null },
+        { "id": 2, "title": "TRÁNSITO", "value": null }
+      ]
+    },
+    {
+      "cons": 7,
+      "type": 13,
+      "title": "PUERTO, ESTADO RECTOR DE PUERTO",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "value2": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        {
+          "title": "Origen",
+          "value": "VALOR_ASIGNADO_POR_USUARIO",
+          "placeHolder": "PLACE HOLDER INPUT",
+          "data": [
+            { "id": 1, "title": "Caribe / Cartagena", "value": null },
+            { "id": 2, "title": "Caribe / Barranquilla", "value": null },
+            { "id": 3, "title": "Pacífico / Bahía Solano", "value": null },
+            { "id": 4, "title": "Pacífico / Buenaventura", "value": null },
+            { "id": 5, "title": "Pacífico / Tumaco", "value": null }
+          ]
+        },
+        {
+          "title": "Destino",
+          "value": "VALOR_ASIGNADO_POR_USUARIO",
+          "placeHolder": "PLACE HOLDER INPUT",
+          "data": [
+            { "id": 1, "title": "Caribe / Cartagena", "value": null },
+            { "id": 2, "title": "Caribe / Barranquilla", "value": null },
+            { "id": 3, "title": "Pacífico / Bahía Solano", "value": null },
+            { "id": 4, "title": "Pacífico / Buenaventura", "value": null },
+            { "id": 5, "title": "Pacífico / Tumaco", "value": null }
+          ]
+        }
+      ]
+    },
+    {
+      "cons": 8,
+      "type": 4,
+      "title": "FECHA ÚLTIMA ESCALA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 9,
+      "type": 3,
+      "title": "PUERTO DE ZARPE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        { "id": 1, "title": "Cartagena / Mamonal", "value": null },
+        { "id": 2, "title": "Barranquilla / Bitco S.A", "value": null },
+        { "id": 3, "title": "Bahía Solano / El Muelle", "value": null },
+        { "id": 4, "title": "Buenaventura / La Palera", "value": null },
+        { "id": 5, "title": "Buenaventura / El Piñal", "value": null },
+        { "id": 6, "title": "Tumaco / Puerto Hondo", "value": null }
+      ]
+    },
+    {
+      "cons": 10,
+      "type": 4,
+      "title": "FECHA ZARPE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 11,
+      "type": 1,
+      "title": "PUERTO DE ULTIMO ARRIBO",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 12,
+      "type": 4,
+      "title": "FECHA ULTIMO ARRIBO",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 13,
+      "id": "identificardor de la pregunta",
+      "type": 13,
+      "title": "SISTEMA DE LOCALIZACIÓN DE BUQUES/VMS",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        {
+          "title": "Nacional",
+          "value": "VALOR_ASIGNADO_POR_USUARIO",
+          "placeHolder": "PLACE HOLDER INPUT",
+          "data": [
+            { "id": 1, "title": "NO", "value": null },
+            { "id": 3, "title": "Nacional AIS", "value": null },
+            { "id": 4, "title": "Nacional - VMS", "value": null },
+            { "id": 5, "title": "Nacional - AIS/VMS", "value": null }
+          ]
+        },
+        {
+          "title": "OROP",
+          "value": "VALOR_ASIGNADO_POR_USUARIO",
+          "placeHolder": "PLACE HOLDER INPUT",
+          "data": [
+            { "id": 1, "title": "NO", "value": null },
+            { "id": 3, "title": "OROP - AIS", "value": null },
+            { "id": 4, "title": "OROP - VMS", "value": null },
+            { "id": 5, "title": "OROP - AIS/VMS", "value": null }
+          ]
+        }
+      ]
+    },
+    {
+      "cons": 14,
+      "type": 1,
+      "title": "SEÑAL RADIOLLAMADA INTERNACIONAL",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 15,
+      "type": 1,
+      "title": "IDENTIFICADOR OMI",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 16,
+      "type": 9,
+      "title": "Permiso Otorgado - Última Prorroga",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 17,
+      "type": 1,
+      "title": "No. Resolución",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 18,
+      "type": 4,
+      "title": "FECHA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 19,
+      "type": 4,
+      "title": "VIGENCIA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 20,
+      "type": 1,
+      "title": "NOMBRE EMBARCACIÓN",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 21,
+      "type": 1,
+      "title": "BANDERA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 22,
+      "type": 1,
+      "title": "MATRICULA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 23,
+      "type": 1,
+      "title": "No. DE PATENTE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 24,
+      "type": 4,
+      "title": "VIGENCIA PATENTE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 25,
+      "type": 1,
+      "title": "REPRESENTANTE LEGAL",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 26,
+      "type": 1,
+      "title": "EMPRESA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 27,
+      "type": 8,
+      "title": "PESQUERÍA Y ARTES AUTORIZADOS",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 28,
+      "type": 14,
+      "title": "PESQUERÍA AUTORIZADA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": [
+        { "id": 1, "title": "Cartagena / Mamonal", "value": null },
+        { "id": 2, "title": "Barranquilla / Bitco S.A", "value": null },
+        { "id": 3, "title": "Bahía Solano / El Muelle", "value": null },
+        { "id": 4, "title": "Buenaventura / La Palera", "value": null },
+        { "id": 5, "title": "Buenaventura / El Piñal", "value": null },
+        { "id": 6, "title": "Tumaco / Puerto Hondo", "value": null }
+      ]
+    },
+    {
+      "cons": 29,
+      "type": 1,
+      "title": "ZONA DE PESCA AUTORIZADA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 30,
+      "type": 9,
+      "title": "CARACTERÍSTICAS  ARTE DE PESCA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 31,
+      "type": 1,
+      "title": "Ojo de Malla (Pulgadas)",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 32,
+      "type": 1,
+      "title": "Ancho de la red (Brazas)",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 33,
+      "type": 1,
+      "title": "Ojo de Malla del Copo (Pulgadas)",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 34,
+      "type": 1,
+      "title": "Tamaño No. y tipo de Anzuelo",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 35,
+      "type": 1,
+      "title": "Longitud de la Red (Brazas)",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 36,
+      "type": 1,
+      "title": "Material de arte de pesca",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 37,
+      "type": 10,
+      "title": "EQUIPOS O DISPOSITIVOS REQUERIDOS",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 38,
+      "type": 1,
+      "title": "NOMBRE CAPITÁN DE PESCA",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 39,
+      "type": 1,
+      "title": "NACIONALIDAD",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 40,
+      "type": 8,
+      "title": "LOS DATOS RELACIONADOS CON LAS MEDIDAS DE ORDENAMIENTO APLICABLES",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 41,
+      "type": 11,
+      "title": "OBSERVACIONES AL CUMPLIMIENTO DE MEDIDAS DE MANEJO APLICABLES A LA PESQUERÍA (Nacional - OROP´s)",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 42,
+      "type": 11,
+      "title": "Conclusiones del Inspector",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 43,
+      "type": 11,
+      "title": "Comentarios adicionales (espacio disponible para el Capitán)",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 44,
+      "type": 1,
+      "title": "NOMBRE DEL FUNCIONARIO- AUNAP",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 45,
+      "type": 2,
+      "title": "C.C del FUNCIONARIO- AUNAP",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 46,
+      "type": 15,
+      "title": "Firma del FUNCIONARIO- AUNAP",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 47,
+      "type": 1,
+      "title": "NOMBRE DEL CAPITÁN RESPONSABLE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 48,
+      "type": 2,
+      "title": "C.C del Capitán",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 49,
+      "type": 2,
+      "title": "Contacto del Capitán",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 50,
+      "type": 15,
+      "title": "Firma del Capitán",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 51,
+      "type": 1,
+      "title": "NOMBRE DEL ARMADOR RESPONSABLE",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 52,
+      "type": 2,
+      "title": "C.C del Armador",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 53,
+      "type": 2,
+      "title": "Contacto del Armador",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    },
+    {
+      "cons": 54,
+      "type": 15,
+      "title": "Firma del Armador",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
+    }
+  ]
+
+}
