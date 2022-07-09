@@ -515,7 +515,14 @@
       "value": "VALOR_ASIGNADO_POR_USUARIO",
       "placeHolder": "PLACE HOLDER INPUT",
       "data": null
+    },
+    {
+      "cons": 55,
+      "type": 18,
+      "title": "Subir imagen",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
     }
   ]
-
 }

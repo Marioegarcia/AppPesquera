@@ -21,9 +21,10 @@ const FormExecute = (props) => {
   const [loading, setLoading] = useState(true);
   const [stepCount, setStepCount] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
-
+  
 
   const Paint = ({ data }) => {
+    
     switch (data.type) {
       case 1:
         return useMemo(() => <Question.Type_1 data={data} />, [data]);
@@ -53,6 +54,10 @@ const FormExecute = (props) => {
         return useMemo(() => <Question.Type_15 data={data} />, [data]);
       case 16:
         return useMemo(() => <Question.Type_16 data={data} />, [data]);
+      case 17:
+          return useMemo(() => <Question.Type_17 data={data} />, [data]);
+      case 18:
+        return useMemo(() => <Question.Type_18 data={data} />, [data]);
       default:
         return useMemo(() => <Question.Type_12 data={data} />, [data]);
     }
@@ -76,6 +81,39 @@ const FormExecute = (props) => {
         case 5:
           setFile(Config.FT_IV_19);
           break;
+        case 6:
+            setFile(Config.FT_TEST);
+          break;
+        case 7:
+            setFile(Config.FT_IV_13);
+          break;
+        case 8:
+            setFile(Config.FT_IV_1);
+          break;
+        case 9:
+            setFile(Config.FT_IV_2);
+          break;
+        case 10:
+            setFile(Config.FT_IV_3);
+          break;
+        case 11:
+            setFile(Config.FT_IV_4);
+          break;
+        case 12:
+            setFile(Config.FT_IV_5);
+          break;
+        case 13:
+            setFile(Config.FT_IV_6);
+          break;
+        case 14:
+            setFile(Config.FT_IV_7);
+          break;
+        case 15:
+            setFile(Config.FT_IV_8);
+          break;
+        case 16:
+            setFile(Config.FT_IV_16);
+          break;
         default:
           setFile(Config.FT_TEST);
           break;
@@ -86,54 +124,78 @@ const FormExecute = (props) => {
     }
   }, [props.route.params]);
 
-  onPressPosition = (position) => {
+  const onPressPosition = (position) => {
+    
     setActiveStep(position);
   }
 
   const renderItem = ({ item }) => {
+
     return (
       <Paint data={item} />
+      
     );
   };
 
+  // const renderFooter = () => (
+  //   file ? (
+  //     <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom:40, marginTop:30 }}>
+  //       {
+  //         activeStep !== 0 && (
+  //           <TouchableOpacity
+  //             style={[res.palette.btnDanger, { marginVertical: 20, marginHorizontal: 10 }]}
+  //             onPress={async () => {
+  //               setLoading(true);
+  //               setActiveStep(activeStep - 1);
+  //               setLoading(false);
+  //               aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
+  //             }}
+  //           >
+  //             <Text style={res.palette.btnDangerText}>
+  //               Atrás
+  //             </Text>
+  //           </TouchableOpacity>
+  //         )
+  //       }
+  //       <TouchableOpacity
+  //         style={[res.palette.btnConfirm, { marginVertical: 20 }]}
+  //         onPress={async () => {
+  //           if (parseInt(file.questions.length / 10) === (activeStep + 1)) {
+  //             props.navigation.navigate("Main", {});
+  //           } else {
+  //             setLoading(true);
+  //             setActiveStep(activeStep + 1);
+  //             setLoading(false);
+  //             aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
+  //             // aceEditorRef.scrollToTop();
+  //           }
+  //         }}
+  //       >
+  //         <Text style={res.palette.btnConfirmText}>
+  //           {
+  //             parseInt(file.questions.length / 10) === (activeStep + 1) ? 'ENVIAR' : 'Siguiente'
+  //           }
+  //         </Text>
+  //       </TouchableOpacity>
+  //     </View>
+  //   ) :
+  //     <>
+  //     </>
+  // );
   const renderFooter = () => (
     file ? (
       <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom:40, marginTop:30 }}>
-        {
-          activeStep !== 0 && (
-            <TouchableOpacity
-              style={[res.palette.btnDanger, { marginVertical: 20, marginHorizontal: 10 }]}
-              onPress={async () => {
-                setLoading(true);
-                setActiveStep(activeStep - 1);
-                setLoading(false);
-                aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
-              }}
-            >
-              <Text style={res.palette.btnDangerText}>
-                Atrás
-              </Text>
-            </TouchableOpacity>
-          )
-        }
+      
         <TouchableOpacity
           style={[res.palette.btnConfirm, { marginVertical: 20 }]}
           onPress={async () => {
-            if (parseInt(file.questions.length / 10) === (activeStep + 1)) {
-              props.navigation.navigate("Main", {});
-            } else {
-              setLoading(true);
-              setActiveStep(activeStep + 1);
-              setLoading(false);
-              aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
-              // aceEditorRef.scrollToTop();
-            }
+            
+            props.navigation.navigate("Main", {});
+           
           }}
         >
           <Text style={res.palette.btnConfirmText}>
-            {
-              parseInt(file.questions.length / 10) === (activeStep + 1) ? 'ENVIAR' : 'Siguiente'
-            }
+            ENVIAR
           </Text>
         </TouchableOpacity>
       </View>
@@ -141,7 +203,6 @@ const FormExecute = (props) => {
       <>
       </>
   );
-
   const renderHeader = () => (
     <>
       <StepIndicator
@@ -153,30 +214,58 @@ const FormExecute = (props) => {
     </>
   );
 
+   
   const renderList = () => {
     const tempStep = activeStep + 1;
     const questionStart = tempStep === 1 ? tempStep : tempStep * 10 - 9;
+    const parInpar = file.questions.length %2==0 ? 2 : 3
+    const dividir = file.questions.length / parInpar;
+    // console.log(dividir);
     const questionEnd = tempStep === parseInt(file.questions.length / 10) ? file.questions.length : questionStart + 9;
-
+    
     const currentFilter = p => p.cons >= questionStart && p.cons <= questionEnd;
-    return file.questions.filter(currentFilter);
+    // console.log(file.questions.filter(currentFilter));
+   
+    if (file?.questions?.length > 10){
+      return file.questions.filter(currentFilter);
+    }else{
+      return file.questions;
+    }
+   
   };
+ 
+ 
 
   return (
     <View style={styles.container}>
       <View style={{ display: !file || loading ? 'flex' : 'none' }}>
         <FormExecuteLoad />
       </View>
-      <FlatList
+      {/* <FlatList
         ref={ref => {
           aceEditorRef = ref;
         }}
         data={file ? renderList() : []}
-        renderItem={renderItem}
+      
+        renderItem={renderItem }
         keyExtractor={(item) => item.title}
-        ListHeaderComponent={renderHeader}
+        // ListHeaderComponent={renderHeader}
+        ListFooterComponent={renderFooter}
+      /> */}
+
+        <FlatList
+        
+        data={file?.questions}
+      
+        renderItem={(item) => renderItem(item) }
+        keyExtractor={(item) => item?.title}
+        // ListHeaderComponent={renderHeader}
         ListFooterComponent={renderFooter}
       />
+
+     
+
+
     </View>
   );
 };

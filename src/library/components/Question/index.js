@@ -13,7 +13,8 @@ import Type_13 from "./Type_13";
 import Type_14 from "./Type_14";
 import Type_15 from "./Type_15";
 import Type_16 from "./Type_16";
-
+import Type_17 from "./Type_17";
+import Type_18 from "./Type_18";
 export default {
   Type_1,
   Type_2,
@@ -30,4 +31,6 @@ export default {
   Type_14,
   Type_15,
   Type_16,
+  Type_17,
+  Type_18
 };

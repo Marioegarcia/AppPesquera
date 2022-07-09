@@ -2,6 +2,7 @@
   "idForm": 6,
   "questions": [
     {
+      "cons": 1,
       "type": 12,
       "title": "CAPTURA OBJETIVO",
       "value": "VALOR_ASIGNADO_POR_USUARIO",

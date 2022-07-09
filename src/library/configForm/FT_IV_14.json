@@ -1,21 +1,24 @@
 {
   "idForm": 3,
   "questions": [
-    {
+    { 
+      "cons": 1,
       "type": 4,
       "title": "FECHA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
       "placeHolder": "PLACE HOLDER INPUT",
       "data": null
     },
-    {
+    { 
+      "cons": 2,
       "type": 1,
       "title": "REGIONAL",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
       "placeHolder": "PLACE HOLDER INPUT",
       "data": null
     },
-    {
+    { 
+      "cons": 3,
       "type": 1,
       "title": "OFICINA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -23,6 +26,7 @@
       "data": null
     },
     {
+      "cons": 4,
       "type": 1,
       "title": "FUNCIONARIO",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -30,6 +34,7 @@
       "data": null
     },
     {
+      "cons": 5,
       "type": 1,
       "title": "EMBARCACIÓN",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -37,6 +42,7 @@
       "data": null
     },
     {
+      "cons": 6,
       "type": 1,
       "title": "MATRÍCULA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -44,6 +50,7 @@
       "data": null
     },
     {
+      "cons": 7,
       "type": 1,
       "title": "PESQUERÍA AUTORIZADA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -51,6 +58,7 @@
       "data": null
     },
     {
+      "cons": 8,
       "type": 1,
       "title": "PATENTE DE PESCA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -58,6 +66,7 @@
       "data": null
     },
     {
+      "cons": 9,
       "type": 1,
       "title": "EMPRESA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -65,6 +74,7 @@
       "data": null
     },
     {
+      "cons": 10,
       "type": 1,
       "title": "ARMADOR",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -72,6 +82,7 @@
       "data": null
     },
     {
+      "cons": 11,
       "type": 1,
       "title": "CAPITÁN DE PESCA",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
@@ -79,11 +90,84 @@
       "data": null
     },
     {
+      "cons": 12,
       "type": 1,
       "title": "LOCALIZACIÓN",
       "value": "VALOR_ASIGNADO_POR_USUARIO",
       "placeHolder": "PLACE HOLDER INPUT",
       "data": null
+    },
+    {
+      "cons": 13,
+      "type": 17,
+      "title": "Punto A",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "Babor 1",
+      "data": null,
+      "img":1
+    },
+    {
+      "cons": 14,
+      "type": 17,
+      "title": "Punto B",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":1
+    },
+    {
+      "cons": 15,
+      "type": 17,
+      "title": "Punto C",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":0
+    },
+    {
+      "cons": 16,
+      "type": 17,
+      "title": "Punto D",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":0
+    },
+    {
+      "cons": 17,
+      "type": 17,
+      "title": "Punto E",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":0
+    },
+    {
+      "cons": 18,
+      "type": 17,
+      "title": "Punto F",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":3
+    },
+    {
+      "cons": 19,
+      "type": 17,
+      "title": "Punto G",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":3
+    },
+    {
+      "cons": 20,
+      "type": 17,
+      "title": "Punto H",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null,
+      "img":3
     }
   ]
 }

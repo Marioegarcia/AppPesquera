@@ -1,0 +1,14 @@
+{
+    "idForm": 7,
+    "questions":  
+    [
+        {
+          "cons": 1,
+          "type": 1,
+          "title": "NOMBRE",
+          "value": "VALOR_ASIGNADO_POR_USUARIO",
+          "placeHolder": "PLACE HOLDER INPUT",
+          "data": null
+        }
+    ]
+}
