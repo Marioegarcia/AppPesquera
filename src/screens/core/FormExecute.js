@@ -148,52 +148,52 @@ const FormExecute = (props) => {
     );
   };
 
-  // const renderFooter = () => (
-  //   file ? (
-  //     <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom:40, marginTop:30 }}>
-  //       {
-  //         activeStep !== 0 && (
-  //           <TouchableOpacity
-  //             style={[res.palette.btnDanger, { marginVertical: 20, marginHorizontal: 10 }]}
-  //             onPress={async () => {
-  //               setLoading(true);
-  //               setActiveStep(activeStep - 1);
-  //               setLoading(false);
-  //               aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
-  //             }}
-  //           >
-  //             <Text style={res.palette.btnDangerText}>
-  //               Atrás
-  //             </Text>
-  //           </TouchableOpacity>
-  //         )
-  //       }
-  //       <TouchableOpacity
-  //         style={[res.palette.btnConfirm, { marginVertical: 20 }]}
-  //         onPress={async () => {
-  //           if (parseInt(file.questions.length / 10) === (activeStep + 1)) {
-  //             props.navigation.navigate("Main", {});
-  //           } else {
-  //             setLoading(true);
-  //             setActiveStep(activeStep + 1);
-  //             setLoading(false);
-  //             aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
-  //             // aceEditorRef.scrollToTop();
-  //           }
-  //         }}
-  //       >
-  //         <Text style={res.palette.btnConfirmText}>
-  //           {
-  //             parseInt(file.questions.length / 10) === (activeStep + 1) ? 'ENVIAR' : 'Siguiente'
-  //           }
-  //         </Text>
-  //       </TouchableOpacity>
-  //     </View>
-  //   ) :
-  //     <>
-  //     </>
-  // );
   const renderFooter = () => (
+    file ? (
+      <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom:40, marginTop:30 }}>
+        {
+          activeStep !== 0 && (
+            <TouchableOpacity
+              style={[res.palette.btnDanger, { marginVertical: 20, marginHorizontal: 10 }]}
+              onPress={async () => {
+                setLoading(true);
+                setActiveStep(activeStep - 1);
+                setLoading(false);
+                aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
+              }}
+            >
+              <Text style={res.palette.btnDangerText}>
+                Atrás
+              </Text>
+            </TouchableOpacity>
+          )
+        }
+        <TouchableOpacity
+          style={[res.palette.btnConfirm, { marginVertical: 20 }]}
+          onPress={async () => {
+            if (parseInt(file.questions.length / 10) === (activeStep + 1)) {
+              props.navigation.navigate("Main", {});
+            } else {
+              setLoading(true);
+              setActiveStep(activeStep + 1);
+              setLoading(false);
+              aceEditorRef.scrollToOffset({ x: 0, y: 0, animated: true, })
+              // aceEditorRef.scrollToTop();
+            }
+          }}
+        >
+          <Text style={res.palette.btnConfirmText}>
+            {
+              parseInt(file.questions.length / 10) === (activeStep + 1) ? 'ENVIAR' : 'Siguiente'
+            }
+          </Text>
+        </TouchableOpacity>
+      </View>
+    ) :
+      <>
+      </>
+  );
+  const renderFooter2 = () => (
     file ? (
       <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom:40, marginTop:30 }}>
       
@@ -237,15 +237,14 @@ const FormExecute = (props) => {
     const currentFilter = p => p.cons >= questionStart && p.cons <= questionEnd;
     // console.log(file.questions.filter(currentFilter));
    
-    if (file?.questions?.length > 10){
-      return file.questions.filter(currentFilter);
-    }else{
-      return file.questions;
-    }
+   
+    return file.questions.filter(currentFilter);
+ 
    
   };
  
- 
+  
+  console.log(file?.idForm);
 
   return (
     <View style={styles.container}>
@@ -260,19 +259,36 @@ const FormExecute = (props) => {
       
         renderItem={renderItem }
         keyExtractor={(item) => item.title}
-        // ListHeaderComponent={renderHeader}
+        ListHeaderComponent={renderHeader}
         ListFooterComponent={renderFooter}
       /> */}
 
+      {
+        file?.idForm == 1 || file?.idForm == 2 ? (
         <FlatList
+                ref={ref => {
+                  aceEditorRef = ref;
+                }}
+                data={file ? renderList() : []}
+                renderItem={renderItem }
+                keyExtractor={(item) => item.title}
+                ListHeaderComponent={renderHeader}
+                ListFooterComponent={renderFooter}
+              />
+        ) :(
+          <FlatList
         
-        data={file?.questions}
-      
-        renderItem={(item) => renderItem(item) }
-        keyExtractor={(item) => item?.title}
-        // ListHeaderComponent={renderHeader}
-        ListFooterComponent={renderFooter}
-      />
+          data={file?.questions}
+        
+          renderItem={(item) => renderItem(item) }
+          keyExtractor={(item) => item?.title}
+          // ListHeaderComponent={renderHeader}
+          ListFooterComponent={renderFooter2}
+        />
+        )
+      }
+
+       
 
      
 

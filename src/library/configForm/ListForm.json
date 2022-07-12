@@ -55,40 +55,9 @@
       { "title": "Fecha", "value": "26 de febrero de 2019" }
     ]
   },
-  {
-    "idForm": 7,
-    "name": "Gestion de Banderas",
-    "description": "Descripción corta de lo que realiza el formulario",
-    "main": 1,
-    "info": [
-      { "title": "Código", "value": "FT-IV-013" },
-      { "title": "Versión", "value": "04" },
-      { "title": "Fecha", "value": "4 de julio de 2022" }
-    ]
-  },
-  {
-    "idForm": 8,
-    "name": "Gestión de Empresas",
-    "description": "Descripción corta de lo que realiza el formulario",
-    "main": 1,
-    "info": [
-      { "title": "Código", "value": "FT-IV-01" },
-      { "title": "Versión", "value": "04" },
-      { "title": "Fecha", "value": "4 de julio de 2022" }
-    ]
-  },
 
-  {
-    "idForm": 10,
-    "name": "Gestión de muelles",
-    "description": "Descripción corta de lo que realiza el formulario",
-    "main": 1,
-    "info": [
-      { "title": "Código", "value": "FT-IV-03" },
-      { "title": "Versión", "value": "04" },
-      { "title": "Fecha", "value": "4 de julio de 2022" }
-    ]
-  },
+
+ 
   {
     "idForm": 16,
     "name": "Acta de Decomiso Preventivo",
