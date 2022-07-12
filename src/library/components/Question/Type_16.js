@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View, TextInput, Text } from "react-native";
+import { StyleSheet, View, TextInput, Text, FlatList, ScrollView } from "react-native";
 import res from "res/R";
 import IoniconsIcon from "react-native-vector-icons/Ionicons";
 import { Button } from "react-native-elements";
-import { Table, Row, TableWrapper, Cell } from "react-native-table-component";
+import { Table, Row, TableWrapper, Cell,Rows } from "react-native-table-component";
 import Type_3 from "./Type_3";
 import Type_14 from "./Type_14";
 
@@ -23,6 +23,9 @@ const Type_16 = ({ data }) => {
     // ["1", "2", "3", "4"],
     // ["a", "b", "c", "d"],
   ]);
+  
+  const [form, setForm] = useState({ 
+  })
   const calculateFlexArr = () => {
     let tempFlexArr = [];
     let num = 1;
@@ -40,10 +43,40 @@ const Type_16 = ({ data }) => {
     setLocalFlexArr(tempFlexArr);
   };
 
+  const onChange = (value,nombre) => {
+
+    setForm({
+      ...form,
+      [nombre]:value
+    })
+
+   
+
+
+  }
+
+  const recorrer= () => {
+
+
+ 
+    let arreglo = []
+    for (let clave in form){
+      // console.log(form[clave]);
+      arreglo.push(form[clave])
+    }
+
+
+    let temData = tableData;
+    temData = [...temData, [...arreglo]];
+    setTableData(temData);
+
+  }
+ 
+
   useEffect(() => {
     calculateFlexArr();
   }, []);
-
+  
   return (
     <View style={styles.container}>
       <Text style={styles.lblTitle}>{data.title}</Text>
@@ -62,6 +95,7 @@ const Type_16 = ({ data }) => {
                     borderBottomColor: res.colors.darkGray,
                     marginHorizontal: 20,
                   }}
+                  onChangeText={(text) => onChange(text,item?.id) }
                 />
               ) :
                 (item !== "" && item.data !== undefined) &&
@@ -94,64 +128,109 @@ const Type_16 = ({ data }) => {
               />
             }
             onPress={() => {
-              let temData = tableData;
-              temData = [...temData, ["aa", "bb", "cc", "remove"]];
-              setTableData(temData);
+              // let temData = tableData;
+              // temData = [...temData, ["aa", "bb", "cc", "remove"]];
+              // setTableData(temData);
+              recorrer()
             }}
           />
         </View>
       </View>
+
       {tableHead && (
-        <Table
-          borderStyle={{ borderWidth: 1, borderColor: res.colors.blueGray }}
-        >
-          <TableWrapper style={styles.row}>
-            {tableHead.map((item, id) => (
-              <Cell
-                key={id}
-                style={{ ...styles.headTable, flex: localFlexArr[id] }}
-                data={<Text style={styles.headText}>{item.title}</Text>}
-              />
-            ))}
-          </TableWrapper>
-          {tableData.map((rowData, index) => (
-            <TableWrapper key={index} style={styles.row}>
-              {rowData.map((cellData, cellIndex) => (
+        <ScrollView horizontal >
+          <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
+            <TableWrapper style={styles.row}>
+              {tableHead.map((item, id) => (
                 <Cell
-                  style={{ flex: localFlexArr[cellIndex] }}
-                  key={cellIndex}
-                  data={
-                    tableHead.length === cellIndex + 1 && actionRemove ? (
-                      <IoniconsIcon
-                        onPress={() => {
-                          let temData = tableData.filter(
-                            (item, id) => id !== index
-                          );
-                          setTableData(temData);
-                        }}
-                        name="remove-circle-outline"
-                        style={[
-                          styles.icGpElementItem,
-                          { flex: localFlexArr[cellIndex] },
-                        ]}
-                      />
-                    ) : (
-                      <Text style={styles.textData}>{cellData}</Text>
-                    )
-                  }
+                  key={id}
+                  style={{ width:'12%' }}
+                  data={<Text style={styles.headText}>{item.title}</Text>}
                 />
               ))}
             </TableWrapper>
-          ))}
-          <TableWrapper>
-            <Cell
-              data={
-                <Text style={styles.footerText}>Total: {tableData.length}</Text>
-              }
-              style={styles.footerTable}
-            />
-          </TableWrapper>
-        </Table>
+            {tableData.map((rowData, index) => (
+              <TableWrapper key={index} style={styles.row}>
+                {rowData.map((cellData, cellIndex) => (
+                  <Cell
+                    style={{ width:'12%' }}
+                    key={cellIndex}
+                    data={
+                      tableHead.length === cellIndex + 1 && actionRemove ? (
+                        <IoniconsIcon
+                          onPress={() => {
+                            let temData = tableData.filter(
+                              (item, id) => id !== index
+                            );
+                            setTableData(temData);
+                          }}
+                          name="remove-circle-outline"
+                          style={[
+                            styles.icGpElementItem,
+                            { flex: localFlexArr[cellIndex] },
+                          ]}
+                        />
+                      ) : (
+                        <Text style={styles.textData}>{cellData}</Text>
+                      )
+                    }
+                  />
+                ))}
+              </TableWrapper>
+            ))}
+          </Table>
+          {/* <Table
+            borderStyle={{ borderWidth: 1, borderColor: res.colors.blueGray }}
+            >
+                    <TableWrapper style={styles.row}>
+                      {tableHead.map((item, id) => (
+                        <Cell
+                          key={id}
+                          style={{ ...styles.headTable, flex: localFlexArr[id] }}
+                          data={<Text style={styles.headText}>{item.title}</Text>}
+                        />
+                      ))}
+                    </TableWrapper>
+                    {tableData.map((rowData, index) => (
+                      <TableWrapper key={index} style={styles.row}>
+                        {rowData.map((cellData, cellIndex) => (
+                          <Cell
+                            style={{ flex: localFlexArr[cellIndex] }}
+                            key={cellIndex}
+                            data={
+                              tableHead.length === cellIndex + 1 && actionRemove ? (
+                                <IoniconsIcon
+                                  onPress={() => {
+                                    let temData = tableData.filter(
+                                      (item, id) => id !== index
+                                    );
+                                    setTableData(temData);
+                                  }}
+                                  name="remove-circle-outline"
+                                  style={[
+                                    styles.icGpElementItem,
+                                    { flex: localFlexArr[cellIndex] },
+                                  ]}
+                                />
+                              ) : (
+                                <Text style={styles.textData}>{cellData}</Text>
+                              )
+                            }
+                          />
+                        ))}
+                      </TableWrapper>
+                    ))}
+                    <TableWrapper>
+                      <Cell
+                        data={
+                          <Text style={styles.footerText}>Total: {tableData.length}</Text>
+                        }
+                        style={styles.footerTable}
+                      />
+                    </TableWrapper>
+                  </Table> */}
+        </ScrollView>
+        
       )}
     </View>
   );
@@ -197,20 +276,22 @@ const styles = StyleSheet.create({
   },
   headTable: {
     backgroundColor: "#f1f8ff",
-    flex: 1,
+    // flex: 1,
   },
-  row: { flexDirection: "row" },
+  row: { flexDirection: "row", },
   headText: {
     marginHorizontal: 5,
-    marginVertical: 10,
+    marginVertical: 5,
     textAlign: "center",
     fontWeight: "bold",
+   
   },
   textData: {
     margin: 6,
     marginLeft: 10,
     color: res.colors.darkText,
-    flex: 1,
+    // flex: 1,
+  
   },
   footerTable: {
     height: 40,
