@@ -114,6 +114,17 @@ const FormExecute = (props) => {
         case 16:
             setFile(Config.FT_IV_16);
           break;
+        case 17:
+            setFile(Config.FT_IV_9);
+          break;
+        case 18:
+            setFile(Config.FT_IV_10);
+          break;
+        case 19:
+            setFile(Config.FT_IV_11);
+          break;
+
+
         default:
           setFile(Config.FT_TEST);
           break;

@@ -1,0 +1,209 @@
+{
+    "idForm": 19,
+    "questions": [
+{   
+    "type": 1,
+    "title": "No. Formulario",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Lugar",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 4,
+    "title": "Seleccionar Fecha",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Empresa Colombia",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Total Carga (Ton.)",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Nombre Embarcación de Carga",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 3,
+    "title": "Puerto de Transbordo de la Carga",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 3,
+    "title": "Bandera",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 3,
+    "title": "Puerto de Zarpe",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 3,
+    "title": "Puerto de Desembarque",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 3,
+    "title": "Área de Operación",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": [
+        { "id": 1, "title": "Atlantico", "value": null },
+        { "id": 2, "title": "Pacifico - OPO", "value": null }
+      ]
+},
+{   
+    "type": 5,
+    "title": "Notificación Previa",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": [
+        { "id": 1, "title": "SI", "value": null },
+        { "id": 2, "title": "NO", "value": null }
+      ]
+},
+{   
+    "type": 9,
+    "title": "iNFORMACIÓN DE TRANSBORDO SOBRE EMBARCACIONES DONANTES",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Nombre Embarcación",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 3,
+    "title": "Bandera",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "No. Identificador (OMI)",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Lugar de Transbordo",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 4,
+    "title": "Fecha de Transbordo",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Áreas de Captura",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 8,
+    "title": "PRODUCTO POR ESPECIE (TON.)",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Especie",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Forma del Producto",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Cantidad",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Total Producto Desembarcado",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Nombre Funcionario",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Nombre Capitán Barco Carguero",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 1,
+    "title": "Nombre Empresa Responsable",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+},
+{   
+    "type": 11,
+    "title": "Observaciones",
+    "value": "VALOR_ASIGNADO_POR_USUARIO",
+    "placeHolder": "PLACE HOLDER INPUT",
+    "data": null
+}
+
+
+    ]
+}

@@ -30,7 +30,7 @@ const Main = (props) => {
       <ItemMain key={item.idForm} data={item} navigation={props.navigation} />
     );
   };
-
+  console.log(Config.ListForm.length);
   return (
     <FlatList
       style={styles.container}

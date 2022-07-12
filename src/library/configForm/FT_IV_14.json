@@ -168,6 +168,15 @@
       "placeHolder": "PLACE HOLDER INPUT",
       "data": null,
       "img":3
+    },
+    {
+      "cons": 21,
+      "type": 18,
+      "title": "Subir imagen",
+      "value": "VALOR_ASIGNADO_POR_USUARIO",
+      "placeHolder": "PLACE HOLDER INPUT",
+      "data": null
     }
+
   ]
 }
