@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View, TextInput, Text } from "react-native";
 import MultiSelect from 'react-native-multiple-select';
 
@@ -7,10 +7,13 @@ import res from "res/R";
 const Type_14 = ({ data }) => {
 
   const [selectedItems, setSelectedItems] = useState([]);
+  const [value, setValue] = useState([]);
 
-  onSelectedItemsChange = selectedItems => {
+  const onSelectedItemsChange = selectedItems => {
     setSelectedItems(selectedItems);
   };
+
+
 
   return (
     <View style={styles.gpElement}>
@@ -18,7 +21,7 @@ const Type_14 = ({ data }) => {
       <View style={[styles.gpElementGroup, data.styleContainer]}>
         <MultiSelect
           hideTags
-          items={data.data}
+          items={data?.data}
           uniqueKey="id"
           onSelectedItemsChange={onSelectedItemsChange}
           selectedItems={selectedItems}

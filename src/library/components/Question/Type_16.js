@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View, TextInput, Text, FlatList, ScrollView } from "react-native";
+import { StyleSheet, View, TextInput, Text, FlatList, ScrollView, useWindowDimensions, Dimensions } from "react-native";
 import res from "res/R";
 import IoniconsIcon from "react-native-vector-icons/Ionicons";
 import { Button } from "react-native-elements";
 import { Table, Row, TableWrapper, Cell,Rows } from "react-native-table-component";
 import Type_3 from "./Type_3";
 import Type_14 from "./Type_14";
+
+export const deviceWidth = Dimensions.get('window').width;
 
 const Type_16 = ({ data }) => {
   const [actionRemove, setActionRemove] = useState(false);
@@ -76,7 +78,7 @@ const Type_16 = ({ data }) => {
   useEffect(() => {
     calculateFlexArr();
   }, []);
-  
+ 
   return (
     <View style={styles.container}>
       <Text style={styles.lblTitle}>{data.title}</Text>
@@ -128,9 +130,6 @@ const Type_16 = ({ data }) => {
               />
             }
             onPress={() => {
-              // let temData = tableData;
-              // temData = [...temData, ["aa", "bb", "cc", "remove"]];
-              // setTableData(temData);
               recorrer()
             }}
           />
@@ -144,7 +143,7 @@ const Type_16 = ({ data }) => {
               {tableHead.map((item, id) => (
                 <Cell
                   key={id}
-                  style={{ width:'12%' }}
+                  style={{ width:deviceWidth / 2.5 }}
                   data={<Text style={styles.headText}>{item.title}</Text>}
                 />
               ))}
@@ -153,7 +152,7 @@ const Type_16 = ({ data }) => {
               <TableWrapper key={index} style={styles.row}>
                 {rowData.map((cellData, cellIndex) => (
                   <Cell
-                    style={{ width:'12%' }}
+                    style={{ width:deviceWidth / 2.5}}
                     key={cellIndex}
                     data={
                       tableHead.length === cellIndex + 1 && actionRemove ? (
@@ -179,56 +178,6 @@ const Type_16 = ({ data }) => {
               </TableWrapper>
             ))}
           </Table>
-          {/* <Table
-            borderStyle={{ borderWidth: 1, borderColor: res.colors.blueGray }}
-            >
-                    <TableWrapper style={styles.row}>
-                      {tableHead.map((item, id) => (
-                        <Cell
-                          key={id}
-                          style={{ ...styles.headTable, flex: localFlexArr[id] }}
-                          data={<Text style={styles.headText}>{item.title}</Text>}
-                        />
-                      ))}
-                    </TableWrapper>
-                    {tableData.map((rowData, index) => (
-                      <TableWrapper key={index} style={styles.row}>
-                        {rowData.map((cellData, cellIndex) => (
-                          <Cell
-                            style={{ flex: localFlexArr[cellIndex] }}
-                            key={cellIndex}
-                            data={
-                              tableHead.length === cellIndex + 1 && actionRemove ? (
-                                <IoniconsIcon
-                                  onPress={() => {
-                                    let temData = tableData.filter(
-                                      (item, id) => id !== index
-                                    );
-                                    setTableData(temData);
-                                  }}
-                                  name="remove-circle-outline"
-                                  style={[
-                                    styles.icGpElementItem,
-                                    { flex: localFlexArr[cellIndex] },
-                                  ]}
-                                />
-                              ) : (
-                                <Text style={styles.textData}>{cellData}</Text>
-                              )
-                            }
-                          />
-                        ))}
-                      </TableWrapper>
-                    ))}
-                    <TableWrapper>
-                      <Cell
-                        data={
-                          <Text style={styles.footerText}>Total: {tableData.length}</Text>
-                        }
-                        style={styles.footerTable}
-                      />
-                    </TableWrapper>
-                  </Table> */}
         </ScrollView>
         
       )}

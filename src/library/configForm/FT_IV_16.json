@@ -55,12 +55,12 @@
             "value": "VALOR_ASIGNADO_POR_USUARIO",
             "placeHolder": "PLACE HOLDER INPUT",
             "data": 
-        [ { "id": 1, "title": "Elemento", "value": null },
-        { "id": 2, "title": "Cantidad (Un)", "value": null },
-        { "id": 3, "title": "Caracteristicas Y Estado", "value": null },
-        { "id": 4, "title": "Valor Comercial", "value": null },
-        { "id": 5, "title": "remove", "value": null }
-        ]
+          [ { "id": 1, "title": "Elemento", "value": null },
+          { "id": 2, "title": "Cantidad (Un)", "value": null },
+          { "id": 3, "title": "Caracteristicas Y Estado", "value": null },
+          { "id": 4, "title": "Valor Comercial", "value": null },
+          { "id": 5, "title": "remove", "value": null }
+          ]
           },
           {
             "type": 8,
@@ -74,7 +74,20 @@
             "title": "MOTIVOS DEL DECOMISO PREVENTIVO",
             "value": "VALOR_ASIGNADO_POR_USUARIO",
             "placeHolder": "PLACE HOLDER INPUT",
-            "data": null
+            "data": [ 
+              { "id": 7, "title": "Sin Permiso", "value": null },
+              { "id": 8, "title": "Sin patente", "value": null },
+              { "id": 9, "title": "Sin salvoconducto", "value": null },
+              { "id": 10, "title": "Documentos adulterados", "value": null },
+             
+              { "id": 1, "title": "Especie en época de veda", "value": null },
+              { "id": 2, "title": "Especie no autorizada", "value": null },
+              { "id": 3, "title": " Incumplimiento tallas minimas", "value": null },
+              { "id": 4, "title": "Artes de pesca no autorizadas", "value": null },
+              { "id": 5, "title": "Pesca áreas no autorizadas", "value": null },
+              { "id": 6, "title": "Malas practicas de pesca", "value": null }
+               
+            ]
           },
           {
             "type": 11,
