@@ -33,7 +33,7 @@ export default function App() {
   return (
     <ReactRedux.Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="dark-content" backgroundColor={'black'} />
         <NavigationContainer>
           <CounterContainer />
         </NavigationContainer>

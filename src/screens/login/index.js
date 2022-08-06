@@ -10,6 +10,7 @@ import {
   Platform,
   ScrollView,
   Linking,
+  Alert,
 } from "react-native";
 import { useNetInfo } from "@react-native-community/netinfo";
 import messaging from "@react-native-firebase/messaging";
@@ -17,13 +18,15 @@ import messaging from "@react-native-firebase/messaging";
 import res from "res/R";
 import CustomTextInput from "library/components/TextInput";
 import AlertPro from "library/components/AlertPro";
+import axios from "axios";
+
 
 const screen = Dimensions.get("window");
 
 const Login = (props) => {
   const { isConnected } = useNetInfo();
-  const [password, setPassword] = useState("123456");
-  const [documentNumber, setDocumentNumber] = useState("dev@ecogourmet.org");
+  const [password, setPassword] = useState("admin");
+  const [documentNumber, setDocumentNumber] = useState("admin@admin.com");
 
   const [alertPro, setRefAlertPro] = useState();
   const [messageAlert, setMessageAlert] = useState({
@@ -49,7 +52,7 @@ const Login = (props) => {
     }
   }
 
-  const onSendData = () => {
+  const onSendData = async() => {
     const REG = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (!REG.test(documentNumber)) {
       setMessageAlert({
@@ -59,11 +62,27 @@ const Login = (props) => {
       alertPro.open();
       return false;
     }
+
+    const result = await login({usuario: documentNumber,password: password})
+
+    if (result.status !== 201) {
+      setMessageAlert({
+        heading: "Datos incorrectos",
+        message: "Verifique usuario y contraseña",
+      });
+      alertPro.open();
+      return false;
+    }
+   
+    
+
+    
     messaging()
       .getToken()
       .then((token) => {
         props.onGetUser({
-          token,
+          api_token:result?.data.api_token,
+          token:token,
           username: documentNumber,
           password: password,
           usuarioCreacion: 1,
@@ -194,6 +213,29 @@ const Login = (props) => {
     </ScrollView>
   );
 };
+
+
+const headers = {
+  Accept: 'application/json',
+  'Content-Type': 'application/json',
+  'Authorization':'U1l0UWpEQm9VemQ0QjNIVkM4ZmJtU3BDbDVGUkdtdnRJcHdPTE5wSTY2MUdTelJQdXkzMlFYVjF3bmhk62e803bce032e'
+};
+
+
+async function login(data) {
+  try {
+    const url = `http://68.183.50.234:12345/api/user`;
+
+    const apiCall = await axios.post(url,data,headers)
+    
+  
+    return {data:apiCall.data,status:apiCall.status}
+  } catch (error) {
+    return {status:error.response.status}
+  }
+
+
+}
 
 const styles = StyleSheet.create({
   header: {

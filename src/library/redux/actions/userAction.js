@@ -8,6 +8,7 @@ import {
 } from '../types/userType';
 
 export const getUserAction = data => {
+   
     return {
         type: GET_USER,
         data

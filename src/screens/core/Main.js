@@ -4,6 +4,7 @@ import { StyleSheet, View, Image, Text, ScrollView, FlatList } from "react-nativ
 import res from "res/R";
 import ItemMain from "library/components/Item/Form";
 import Config from "library/configForm";
+import { useSelector } from "react-redux";
 
 const Main = (props) => {
 
@@ -30,7 +31,9 @@ const Main = (props) => {
       <ItemMain key={item.idForm} data={item} navigation={props.navigation} />
     );
   };
-  console.log(Config.ListForm.length);
+
+  const state = useSelector(store => store.userReducer)
+
   return (
     <FlatList
       style={styles.container}

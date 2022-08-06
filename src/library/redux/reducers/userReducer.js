@@ -23,26 +23,23 @@ const INITIAL_STATE = {
   loading: false,
   error: null,
   succeeded: null,
+  apiToken:null
 };
 
 const REDUCERS = (state = INITIAL_STATE, action) => {
+  
   switch (action.type) {
     case GET_USER:
-      console.log(GET_USER);
-      // return Object.assign({}, state, {
-      //   currentUser: null,
-      //   profile: null,
-      //   loading: true,
-      //   error: null,
-      //   succeeded: null,
-      // });
+      console.log({action});
       return Object.assign({}, state, {
         loading: false,
         error: null,
         currentUser: {
-          idUser: 1,
-          email: "dev@ecogourmet.org",
+          idUser: action.data.token,
+          token:action.data.token,
+          email: action.data.username,
           fullName: "Developer",
+          apiToken:action.data.api_token,
         },
       });
     case GET_USER_SUCCEEDED:
@@ -72,7 +69,7 @@ const REDUCERS = (state = INITIAL_STATE, action) => {
         error: null,
       });
     case SET_USER_SUCCEEDED:
-      console.log(action.payload);
+     
       if (action.payload.code == "000") {
         return Object.assign({}, state, {
           currentUser: null,

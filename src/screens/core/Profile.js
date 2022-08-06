@@ -15,9 +15,11 @@ import res from 'res/R';
 import CustomTextInput from 'library/components/TextInput';
 import CustomAutocomplete from 'library/components/Select';
 import AlertPro from 'library/components/AlertPro';
+import { useSelector } from 'react-redux';
 
 export default function Profile(props) {
   const [tabActive, setTabActive] = useState(0);
+  const user = useSelector(store => store.userReducer.currentUser)
 
   // Profile
   const [name, setName] = useState('');
@@ -132,6 +134,7 @@ export default function Profile(props) {
   return (
     // !props.masterDataStatus.loading ?
     <ScrollView style={styles.container}>
+    
     <Avatar
       onPress={() => alert('Camera or Galery')}
       icon={{
@@ -156,7 +159,12 @@ export default function Profile(props) {
         style={{backgroundColor: res.colors.clearText}}
       />
     </Avatar>
+    <View style={{justifyContent:'center',alignItems:'center'}} >
+      <Text>{user.email}</Text>
+    </View>
+   
     <View style={styles.gpContainer}>
+      
       <TouchableOpacity
         onPress={() => setTabActive(0)}
         style={[styles.gpTab, tabActive || styles.gpTabSelect]}>
